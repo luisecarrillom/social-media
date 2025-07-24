@@ -6,11 +6,11 @@ function capitalize(str) {
 // Load images into the carousel
 function loadImages(prefix, count, containerId) {
   const container = document.getElementById(containerId);
-  const folderName = capitalize(prefix); // Use "Content" or "Design"
+  const folderName = prefix; // Use lowercase to match actual folder names
 
   for (let i = 1; i <= count; i++) {
     const img = document.createElement('img');
-    img.src = `assets/${folderName}/Luis_${folderName}_${i}.png`; // Match correct path
+    img.src = `assets/${folderName}/luis_${prefix}_${i}.png`; // Match correct path
     img.alt = `${prefix} ${i}`;
     img.addEventListener('click', () => openModal(img.src, img.alt));
     container.appendChild(img);
