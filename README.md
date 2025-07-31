@@ -4,7 +4,7 @@ This is a visual portfolio of my social media work.
 It includes content creation and design made for:
 
 - Pharma
-- Cosmetics
+- Cosmetics 
 - Veterinary
 - Consumer products
 
