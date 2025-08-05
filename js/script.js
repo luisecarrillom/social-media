@@ -1,4 +1,4 @@
-// Capitalize first letter of prefix for matching folder names  
+// Capitalize first letter of prefix for matching folder names   
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -26,11 +26,11 @@ function openModal(src, alt) {
   modalImg.alt = alt;
 }
 
-// Close modal 
+// Close modal  
 document.getElementById("modal-close").addEventListener("click", () => {
   document.getElementById("image-modal").style.display = "none";
 });
 
-// Load content and design images 
+// Load content and design images  
 loadImages("content", 11, "carousel-content");
 loadImages("design", 8, "carousel-design");
