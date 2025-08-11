@@ -1,16 +1,16 @@
-// Capitalize first letter of prefix for matching folder names   
+// Capitalize first letter of prefix for matching folder names    
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Load images into the carousel  
+// Load images into the carousel   
 function loadImages(prefix, count, containerId) {
   const container = document.getElementById(containerId);
-  const folderName = prefix; // Use lowercase to match actual folder names  
+  const folderName = prefix; // Use lowercase to match actual folder names   
 
   for (let i = 1; i <= count; i++) {
     const img = document.createElement('img');
-    img.src = `assets/${folderName}/luis_${prefix}_${i}.png`; // Match correct path   
+    img.src = `assets/${folderName}/luis_${prefix}_${i}.png`; // Match correct path    
     img.alt = `${prefix} ${i}`;
     img.addEventListener('click', () => openModal(img.src, img.alt));
     container.appendChild(img);
