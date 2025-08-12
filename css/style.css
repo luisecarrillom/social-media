@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header */ 
 header {
   background: linear-gradient(to right, #fdfdfd, #ffffff);
   padding: 60px 20px 30px;
@@ -34,7 +34,7 @@ p {
   text-align: center;
 }
 
-/* Section */
+/* Section */ 
 section {
   padding: 40px 20px;
 }
@@ -46,7 +46,7 @@ h2 {
   color: #222;
 }
 
-/* Carousel */ 
+/* Carousel */  
 .carousel {
   display: flex;
   flex-wrap: nowrap;
