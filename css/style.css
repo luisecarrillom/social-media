@@ -1,4 +1,4 @@
-/* Reset and base */
+/* Reset and base */ 
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */ 
+/* Header */  
 header {
   background: linear-gradient(to right, #fdfdfd, #ffffff);
   padding: 60px 20px 30px;
@@ -34,7 +34,7 @@ p {
   text-align: center;
 }
 
-/* Section */ 
+/* Section */  
 section {
   padding: 40px 20px;
 }
@@ -46,7 +46,7 @@ h2 {
   color: #222;
 }
 
-/* Carousel */  
+/* Carousel */   
 .carousel {
   display: flex;
   flex-wrap: nowrap;
@@ -57,7 +57,7 @@ h2 {
   scroll-padding-left: 10px;
   scroll-padding-right: 10px;
   -webkit-overflow-scrolling: touch;
-  justify-content: flex-start; /* Make sure images don't disappear at edges */  
+  justify-content: flex-start; /* Make sure images don't disappear at edges */   
 }
 
 .carousel::-webkit-scrollbar {
@@ -69,7 +69,7 @@ h2 {
   border-radius: 6px;
 }
 
-/* Images */
+/* Images */ 
 .carousel img {
   height: 250px;
   flex-shrink: 0;
@@ -87,7 +87,7 @@ h2 {
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
-/* Modal */
+/* Modal */ 
 .modal {
   display: none;
   position: fixed;
