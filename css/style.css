@@ -12,12 +12,56 @@ body {
   line-height: 1.6;
 }
 
-/* Header */  
+/* Header – visual polish */
+/* ===================== */
 header {
-  background: linear-gradient(to right, #fdfdfd, #ffffff);
-  padding: 60px 20px 30px;
+  /* Soft layered background to add depth but keep it clean */
+  background:
+    radial-gradient(80rem 34rem at 15% -20%, rgba(99,102,241,.14), rgba(99,102,241,0) 60%),
+    radial-gradient(70rem 28rem at 85% -25%, rgba(14,165,233,.18), rgba(14,165,233,0) 60%),
+    linear-gradient(to right, #fdfdfd, #ffffff);
+  padding: 80px 20px 40px;  /* More breathing room for a hero feel */
   text-align: center;
   box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.04); /* Crisp bottom edge */
+}
+
+/* Stronger title hierarchy inside the header only */
+header h1 {
+  font-size: 2.6rem;
+  font-weight: 800;       /* Clear, confident headline */
+  line-height: 1.2;
+  color: #111;            /* Fallback if gradient text is not supported */
+  letter-spacing: 0.2px;
+}
+
+/* Small accent bar to guide the eye under the title */
+header h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  opacity: 0.95;
+}
+
+/* Keep the header paragraph readable and well-sized */
+header p {
+  color: #4b5563;      /* Slightly darker for contrast */
+  max-width: 720px;    /* Comfortable line length */
+}
+
+/* Optional gradient text when browser supports background-clip */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  header h1 {
+    background-image: linear-gradient(90deg, #0ea5e9, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;            /* Show the gradient inside the text */
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 h1 {
