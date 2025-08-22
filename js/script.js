@@ -17,20 +17,39 @@ function loadImages(prefix, count, containerId) {
   }
 }
 
-// Open modal with clicked image 
+// Open modal with clicked image (improved)
 function openModal(src, alt) {
   const modal = document.getElementById("image-modal");
   const modalImg = document.getElementById("modal-img");
-  modal.style.display = "flex";
+
   modalImg.src = src;
   modalImg.alt = alt;
+
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden"; // Stop page from scrolling under the modal
 }
 
-// Close modal  
-document.getElementById("modal-close").addEventListener("click", () => {
-  document.getElementById("image-modal").style.display = "none";
-});
+// Close modal (centralized)
+function closeModal() {
+  const modal = document.getElementById("image-modal");
+  modal.style.display = "none";
+  document.body.style.overflow = ""; // Restore page scroll
+}
+
+// Close by clicking the X button
+document.getElementById("modal-close").addEventListener("click", closeModal);
+
 
 // Load content and design images  
 loadImages("content", 11, "carousel-content");
 loadImages("design", 8, "carousel-design");
+
+// Close by clicking outside the image (backdrop)
+document.getElementById("image-modal").addEventListener("click", (e) => {
+  if (e.target.id === "image-modal") closeModal();
+});
+
+// Close with the Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
